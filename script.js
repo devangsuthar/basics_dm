@@ -1,6 +1,12 @@
 $(document).ready(function(){
-    let tab_bg = $("[class=tab-list]");
-    tab_bg.css('background-color','#CCCCCC');    
-    
-    $('.tab-list li:last').css('border-right','none');
+    $('ul li a').click(function(){
+        $('ul li').removeClass('active');
+        $('.tab-content .tab').hide();
+        let clickid = jQuery(this).data("id");
+        console.log('clickid:', clickid);
+        $(clickid).show();
+        jQuery(jQuery(this).data("id")).show();
+        $(this).closest('li').toggleClass('active');
+        
+    });
 });

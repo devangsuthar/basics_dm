@@ -72,11 +72,19 @@ section{
 .tab-section ul{
     display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
+    background-color: #F7F7F7;
+    justify-content: space-between;
 }
 ul.tab-list li{
-    border-right: 1px solid #000;
     list-style: none;
     padding: 0px 20px;
+}
+ul.tab-list li:last-child{
+    border: none;
+}
+ul.tab-list li.active{
+    background-color: #DDD;
 }
 ul.tab-list li a{
     color: #000;
@@ -92,6 +100,9 @@ ul.tab-list li a{
 .tab-content .tab h3{
     font-size: 26px;
     margin-bottom: 10px;
+}
+.tab-content .tab{
+    display: none;
 }
 
 
